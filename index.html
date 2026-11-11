@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>ABC Bank</h1>
+    <p>Bank Management System</p>
+</header>
+
+<nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#accounts">Accounts</a>
+    <a href="#transactions">Transactions</a>
+</nav>
+
+<main>
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <div class="balance-card">
+            <h3>Total Bank Balance</h3>
+            <h1 id="totalBalance">₹0.00</h1>
+            <p id="accountCount">Total Accounts: 0</p>
+        </div>
+    </section>
+
+    <section id="accounts">
+        <h2>Create Bank Account</h2>
+
+        <form id="accountForm">
+            <input type="text" id="customerName"
+                placeholder="Customer Name" required>
+
+            <input type="number" id="initialDeposit"
+                placeholder="Initial Deposit (₹)"
+                min="0" step="0.01" required>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <h2>Manage Money</h2>
+
+        <form id="transactionForm">
+            <select id="transactionType" required>
+                <option value="deposit">Deposit</option>
+                <option value="withdraw">Withdraw</option>
+            </select>
+
+            <input type="text" id="accountNumber"
+                placeholder="Account Number" required>
+
+            <input type="number" id="amount"
+                placeholder="Amount (₹)"
+                min="0.01" step="0.01" required>
+
+            <button type="submit">Submit Transaction</button>
+        </form>
+
+        <h2>Transfer Money</h2>
+
+        <form id="transferForm">
+            <input type="text" id="fromAccount"
+                placeholder="From Account Number" required>
+
+            <input type="text" id="toAccount"
+                placeholder="To Account Number" required>
+
+            <input type="number" id="transferAmount"
+                placeholder="Transfer Amount (₹)"
+                min="0.01" step="0.01" required>
+
+            <button type="submit">Transfer Money</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Customer Accounts</h2>
+        <input type="text" id="searchAccount"
+            placeholder="Search by name or account number">
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account No.</th>
+                        <th>Customer Name</th>
+                        <th>Balance</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="accountTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="transactions">
+        <h2>Transaction History</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Account No.</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionTable"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 ABC Bank | Bank Management System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
