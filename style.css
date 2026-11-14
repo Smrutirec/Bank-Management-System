@@ -244,3 +244,44 @@ body.dark-mode .task-item {
 body.dark-mode .task-info p {
     color: #ddd;
 }
+
+body.dark-mode {
+    background: #151923;
+    color: white;
+}
+
+body.dark-mode .task-form,
+body.dark-mode .task-section,
+body.dark-mode .stat-card {
+    background: #252d3b;
+    color: white;
+}
+
+body.dark-mode .task-item {
+    border-color: #536078;
+}
+
+body.dark-mode .task-info p {
+    color: #ddd;
+}
+
+
+body.dark-mode {
+    background: #151923;
+    color: white;
+}
+
+body.dark-mode .task-form,
+body.dark-mode .task-section,
+body.dark-mode .stat-card {
+    background: #252d3b;
+    color: white;
+}
+
+body.dark-mode .task-item {
+    border-color: #536078;
+}
+
+body.dark-mode .task-info p {
+    color: #ddd;
+}
